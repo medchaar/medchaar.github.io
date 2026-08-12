@@ -39,12 +39,17 @@
   .hero-btns a{display:inline-block;margin-right:14px;margin-bottom:12px;padding:13px 26px;border-radius:8px;font-weight:700;font-size:.95rem;transition:.2s;cursor:pointer}
   .btn-primary{background:var(--accent);color:#fff}
   .btn-primary:hover{background:var(--accent2)}
+  .btn-gold{background:var(--gold);color:#3a2a06}
+  .btn-gold:hover{background:#e6b45a}
   .btn-ghost{border:1.5px solid rgba(255,255,255,.4);color:#fff}
   .btn-ghost:hover{background:rgba(255,255,255,.1)}
-  .hero-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:30px;backdrop-filter:blur(6px)}
-  .hero-card h4{font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);margin-bottom:18px}
+  .hero-right{display:flex;flex-direction:column;align-items:center;gap:26px}
+  .photo-frame{width:260px;height:260px;border-radius:50%;overflow:hidden;border:5px solid rgba(255,255,255,.2);box-shadow:0 20px 50px rgba(0,0,0,.35);flex-shrink:0}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;object-position:50% 28%;display:block}
+  .hero-card{width:100%;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);border-radius:16px;padding:26px;backdrop-filter:blur(6px)}
+  .hero-card h4{font-size:.78rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);margin-bottom:16px}
   .hero-card ul{list-style:none}
-  .hero-card li{display:flex;gap:12px;align-items:flex-start;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.94rem;color:#dbe4ee}
+  .hero-card li{display:flex;gap:12px;align-items:flex-start;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.1);font-size:.92rem;color:#dbe4ee}
   .hero-card li:last-child{border-bottom:none}
   .hero-card li b{color:#fff}
   .tick{color:var(--accent2);font-weight:800;flex-shrink:0}
@@ -188,18 +193,22 @@
       <p class="lead">PMP-certified project leader with 12+ years delivering multimillion-dollar capital installations. Proven record applying PMBOK principles, ensuring GMP &amp; food safety compliance, and driving technical innovation for performance and sustainability.</p>
       <div class="hero-btns">
         <a class="btn-primary" href="#portfolio">View Project Portfolio</a>
-        <a class="btn-ghost" href="#references">Request Full Evidence Pack</a>
+        <a class="btn-gold" href="Mohamed_Chaar_CV.pdf" download>&#8681; Download CV</a>
+        <a class="btn-ghost" href="#references">Request Evidence Pack</a>
       </div>
     </div>
-    <div class="hero-card">
-      <h4>At a glance</h4>
-      <ul>
-        <li><span class="tick">&#10003;</span><span><b>12+ years</b> in dairy &amp; food engineering</span></li>
-        <li><span class="tick">&#10003;</span><span><b>NZ$10M+</b> portfolio at Synlait (15+ projects)</span></li>
-        <li><span class="tick">&#10003;</span><span><b>PMP®</b> passed above target (PMI, 2026)</span></li>
-        <li><span class="tick">&#10003;</span><span><b>NZ Citizen</b> — national &amp; international mobility</span></li>
-        <li><span class="tick">&#10003;</span><span><b>Trilingual</b> — English, French, Arabic</span></li>
-      </ul>
+    <div class="hero-right">
+      <div class="photo-frame"><img src="photo.png" alt="Mohamed Chaar, Senior Engineering Project Manager"></div>
+      <div class="hero-card">
+        <h4>At a glance</h4>
+        <ul>
+          <li><span class="tick">&#10003;</span><span><b>12+ years</b> in dairy &amp; food engineering</span></li>
+          <li><span class="tick">&#10003;</span><span><b>NZ$10M+</b> portfolio at Synlait (15+ projects)</span></li>
+          <li><span class="tick">&#10003;</span><span><b>PMP®</b> passed above target (PMI, 2026)</span></li>
+          <li><span class="tick">&#10003;</span><span><b>NZ Citizen</b> — national &amp; international mobility</span></li>
+          <li><span class="tick">&#10003;</span><span><b>Trilingual</b> — English, French, Arabic</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
