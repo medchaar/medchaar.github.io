@@ -194,7 +194,7 @@
       <div class="hero-btns">
         <a class="btn-primary" href="#portfolio">View Project Portfolio</a>
         <a class="btn-gold" href="Mohamed_Chaar_CV.pdf" download>&#8681; Download CV</a>
-        <a class="btn-ghost" href="#references">Request Evidence Pack</a>
+        <a class="btn-ghost" href="#request" onclick="openRequestFromHero(event)">Request Evidence Pack</a>
       </div>
     </div>
     <div class="hero-right">
@@ -295,7 +295,7 @@
       <div class="quote"><p>Very well planned project, led by yourself. Your teaching style was massively appreciated — patient, clear, and giving me challenges to grow. An extremely enjoyable project and a great one to be involved in.</p><div class="who"><div class="avatar">RF</div><div><div class="name">Reed Fisher</div><div class="title">Materials Handling Engineer · Tetra Pak</div></div></div></div>
     </div>
 
-    <div class="locked">
+    <div class="locked" id="request">
       <div>
         <div class="lock-ico">&#128274;</div>
         <h3>Full evidence &amp; reference pack — by request</h3>
@@ -406,6 +406,16 @@
     var ta=document.createElement('textarea');ta.value=MY_EMAIL;document.body.appendChild(ta);ta.select();
     try{document.execCommand('copy');showToast('✓ '+MY_EMAIL+' copied');}catch(e){showToast(MY_EMAIL);}
     document.body.removeChild(ta);
+  }
+  function openRequestFromHero(e){
+    if(e){e.preventDefault();}
+    var panel=document.getElementById('request');
+    panel.scrollIntoView({behavior:'smooth',block:'center'});
+    var w=document.getElementById('reqFormWrap');
+    if(!w.classList.contains('open')){
+      w.classList.add('open');
+      document.getElementById('reqToggleBtn').textContent='Hide request form';
+    }
   }
   function toggleRequestForm(){
     var w=document.getElementById('reqFormWrap');
