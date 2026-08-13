@@ -4,6 +4,35 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mohamed Chaar, PMP® — Senior Project Manager</title>
+
+<!-- ============ SEO ============ -->
+<meta name="description" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager. Your partner for world-class FMCG project delivery. 12+ years, NZ$10M+ portfolio across dairy & food manufacturing.">
+<meta name="author" content="Mohamed Chaar">
+<link rel="canonical" href="https://medchaar.github.io/">
+
+<!-- ============ FAVICON (handwritten "Mo") ============ -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#0b2545">
+
+<!-- ============ Open Graph (LinkedIn / Facebook / Teams) ============ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Mohamed Chaar — Portfolio">
+<meta property="og:title" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager">
+<meta property="og:description" content="Your partner for world-class FMCG project delivery. 12+ years, NZ$10M+ portfolio across dairy & food manufacturing.">
+<meta property="og:url" content="https://medchaar.github.io/">
+<meta property="og:image" content="https://medchaar.github.io/share-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager">
+
+<!-- ============ Twitter / X card ============ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager">
+<meta name="twitter:description" content="Your partner for world-class FMCG project delivery. 12+ years, NZ$10M+ portfolio across dairy & food manufacturing.">
+<meta name="twitter:image" content="https://medchaar.github.io/share-card.png">
+
 <style>
   :root{
     --navy:#0b2545;--navy2:#13315c;--steel:#1f4e79;--accent:#00a5b5;--accent2:#0fb9c9;
@@ -189,7 +218,7 @@
     <div>
       <span class="eyebrow">Senior Engineering Project Manager</span>
       <h1>Mohamed Chaar<span style="color:var(--gold)">, PMP®</span></h1>
-      <div class="role">Delivering turnkey dairy &amp; food projects — concept to commissioning</div>
+      <div class="role">Your partner for world-class FMCG project delivery</div>
       <p class="lead">PMP-certified project leader with 12+ years delivering multimillion-dollar capital installations. Proven record applying PMBOK principles, ensuring GMP &amp; food safety compliance, and driving technical innovation for performance and sustainability.</p>
       <div class="hero-btns">
         <a class="btn-primary" href="#portfolio">View Project Portfolio</a>
@@ -392,7 +421,6 @@
 
 <script>
   var MY_EMAIL = "medchaar@gmail.com";
-  var NAV_OFFSET = 78; // sticky header height + small gap
   function showToast(msg){
     var t=document.getElementById('toast');
     t.textContent=msg;t.classList.add('show');
@@ -408,8 +436,6 @@
     try{document.execCommand('copy');showToast('✓ '+MY_EMAIL+' copied');}catch(e){showToast(MY_EMAIL);}
     document.body.removeChild(ta);
   }
-  // Scroll so the TOP of the locked panel sits just below the sticky nav
-  // (uses the panel's scroll-margin-top), keeping the whole form in view.
   function scrollToRequestTop(){
     document.getElementById('request').scrollIntoView({behavior:'smooth',block:'start'});
   }
