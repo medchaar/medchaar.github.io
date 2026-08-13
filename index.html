@@ -194,6 +194,23 @@
 
   footer{background:#081a30;color:#7d93a8;text-align:center;padding:26px 24px;font-size:.85rem}
   footer b{color:#fff}
+
+  /* ===== Subtle scroll reveal animations ===== */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
+  .reveal.in{opacity:1;transform:none}
+  /* staggered children (cards/quotes/certs) */
+  .reveal-group>*{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
+  .reveal-group.in>*{opacity:1;transform:none}
+  .reveal-group.in>*:nth-child(1){transition-delay:.00s}
+  .reveal-group.in>*:nth-child(2){transition-delay:.07s}
+  .reveal-group.in>*:nth-child(3){transition-delay:.14s}
+  .reveal-group.in>*:nth-child(4){transition-delay:.21s}
+  .reveal-group.in>*:nth-child(5){transition-delay:.28s}
+  .reveal-group.in>*:nth-child(6){transition-delay:.35s}
+  /* respect users who prefer no motion */
+  @media(prefers-reduced-motion:reduce){
+    .reveal,.reveal-group>*{opacity:1 !important;transform:none !important;transition:none !important}
+  }
 </style>
 </head>
 <body>
@@ -242,7 +259,7 @@
   </div>
 </section>
 
-<div class="stats">
+<div class="stats reveal">
   <div class="wrap">
     <div class="stat"><div class="num">12<span>+</span></div><div class="lbl">Years' experience</div></div>
     <div class="stat"><div class="num">15<span>+</span></div><div class="lbl">Capital projects at Synlait</div></div>
@@ -253,10 +270,10 @@
 
 <section id="about">
   <div class="wrap">
-    <span class="eyebrow">Profile</span>
-    <h2 class="section-title">Engineering leadership, delivered with rigour</h2>
+    <span class="eyebrow reveal">Profile</span>
+    <h2 class="section-title reveal">Engineering leadership, delivered with rigour</h2>
     <p class="section-sub">A project manager who pairs deep process-engineering knowledge with disciplined governance.</p>
-    <div class="about-grid">
+    <div class="about-grid reveal">
       <div>
         <p>Senior Project Manager with over <strong>12 years of experience</strong> delivering turnkey dairy and food projects. Proven record of managing multimillion-dollar installations from concept to commissioning, applying PMBOK principles, ensuring GMP and Food Safety compliance while driving technical innovation to enhance performance and sustainability.</p>
         <p>Currently at <strong>Synlait Milk Limited</strong>, managing a portfolio of 15+ capital and improvement projects valued at over NZ$10M — delivering business-critical upgrades in process capability, hygienic design, reliability and regulatory compliance across Synlait's manufacturing operations.</p>
@@ -279,10 +296,10 @@
 
 <section id="portfolio">
   <div class="wrap">
-    <span class="eyebrow">Selected Projects</span>
-    <h2 class="section-title">Project portfolio</h2>
+    <span class="eyebrow reveal">Selected Projects</span>
+    <h2 class="section-title reveal">Project portfolio</h2>
     <p class="section-sub">A selection of delivered capital projects — all completed on time, within budget, and meeting objectives.</p>
-    <div class="proj-grid">
+    <div class="proj-grid reveal-group">
       <div class="proj"><div class="proj-top"><div><div class="loc">Fonterra · New Zealand</div><h3>Lactose Tipping Upgrade</h3></div><div class="proj-value">NZ$1.0M · 2025</div></div><p>Reduced Health &amp; Safety risk from H20 to M11 and dust exposure from 120% of WES down to 50%. Improved workplace safety to meet the Safety of Machinery standard AS4024.</p><div class="impact">Impact: Risk H20 → M11 · Dust exposure halved</div></div>
       <div class="proj"><div class="proj-top"><div><div class="loc">Fonterra · New Zealand</div><h3>Pregassers &amp; Powder Transport Upgrade</h3></div><div class="proj-value">NZ$1.4M · 2024</div></div><p>Revamped three driers' automation, eliminating product losses and cross-contamination per GMP requirements and achieving 200% acceptance performance targets.</p><div class="impact">Impact: 200% of acceptance targets · Zero cross-contamination</div></div>
       <div class="proj"><div class="proj-top"><div><div class="loc">Norco · Australia</div><h3>Ice Cream Factory Extension</h3></div><div class="proj-value">NZ$5.5M · 2022</div></div><p>Managed a factory expansion to boost production efficiency and market competitiveness, positioning the customer for significant growth in ice cream sales.</p><div class="impact">Impact: Expanded capacity · Growth-ready operations</div></div>
@@ -296,10 +313,10 @@
 
 <section id="recognition">
   <div class="wrap">
-    <span class="eyebrow">Awards &amp; Recognition</span>
-    <h2 class="section-title">Recognised for safety, spirit &amp; care</h2>
+    <span class="eyebrow reveal">Awards &amp; Recognition</span>
+    <h2 class="section-title reveal">Recognised for safety, spirit &amp; care</h2>
     <p class="section-sub">Synlait "Milk Token" recognition awards received across my first months with the business.</p>
-    <div class="rec-grid">
+    <div class="rec-grid reveal-group">
       <div class="rec"><div class="cat">Making it Synlait Safe</div><p>"Great leadership across the D3 Lactose hoist mods to make it safe — thanks for staying back and doing long hours to prepare the plant for success."</p><div class="by">— <b>David Wolfe</b> · Feb 2026</div></div>
       <div class="rec"><div class="cat">Synlait Spirit</div><p>"You showed up every day, did the work right, and kept safety first. Consistent and reliable when it counts. No shortcuts. Just solid work."</p><div class="by">— <b>David Wolfe</b> · Jul 2026</div></div>
       <div class="rec"><div class="cat">Synlait Spirit</div><p>"One of the best self-starters in Synlait — reached out, made connections, and made great progress in only your first week."</p><div class="by">— <b>David Wolfe</b> · Jan 2026</div></div>
@@ -312,10 +329,10 @@
 
 <section id="references">
   <div class="wrap">
-    <span class="eyebrow">What Colleagues &amp; Clients Say</span>
-    <h2 class="section-title">References &amp; testimonials</h2>
+    <span class="eyebrow reveal">What Colleagues &amp; Clients Say</span>
+    <h2 class="section-title reveal">References &amp; testimonials</h2>
     <p class="section-sub">Selected feedback from project managers and stakeholders at Fonterra, Tetra Pak and beyond.</p>
-    <div class="ref-grid">
+    <div class="ref-grid reveal-group">
       <div class="quote"><p>All projects delivered on time, within budget, and meeting all objectives. Mohamed has been instrumental in helping us deliver on the project objectives — I recommend him for managing any future materials handling projects.</p><div class="who"><div class="avatar">RB</div><div><div class="name">Rowan Bull</div><div class="title">Engineering Project Manager · Fonterra, Whareroa</div></div></div></div>
       <div class="quote"><p>Very professional in your approach with very good communication skills and the ability to relate to the customer, sub-contractors and team. A very good work ethic — quick to take responsibility and control of issues. Keep up the good work!</p><div class="who"><div class="avatar">SL</div><div><div class="name">Stephen Leaper</div><div class="title">Accredited Project Manager · Sidel</div></div></div></div>
       <div class="quote"><p>A methodical and constructive approach to issue resolution. Always receptive to suggestions. Follow-up and communication with the client were excellent throughout the journey to implementation and commissioning.</p><div class="who"><div class="avatar">GJ</div><div><div class="name">Grant Johnstone</div><div class="title">PSE Manager, Project Management · Tetra Pak</div></div></div></div>
@@ -324,7 +341,7 @@
       <div class="quote"><p>Very well planned project, led by yourself. Your teaching style was massively appreciated — patient, clear, and giving me challenges to grow. An extremely enjoyable project and a great one to be involved in.</p><div class="who"><div class="avatar">RF</div><div><div class="name">Reed Fisher</div><div class="title">Materials Handling Engineer · Tetra Pak</div></div></div></div>
     </div>
 
-    <div class="locked" id="request">
+    <div class="locked reveal" id="request">
       <div>
         <div class="lock-ico">&#128274;</div>
         <h3>Full evidence &amp; reference pack — by request</h3>
@@ -372,14 +389,14 @@
 
 <section id="certs">
   <div class="wrap">
-    <span class="eyebrow">Credentials</span>
-    <h2 class="section-title">Certifications &amp; training</h2>
+    <span class="eyebrow reveal">Credentials</span>
+    <h2 class="section-title reveal">Certifications &amp; training</h2>
     <p class="section-sub">Formal qualifications and continuing professional development.</p>
-    <div class="pmp-banner">
+    <div class="pmp-banner reveal">
       <div class="pmp-mark">PMP</div>
       <div><h3>Project Management Professional (PMP)®</h3><p>Project Management Institute · Certification No. 4404733 · Granted 06 June 2026 · Valid to 06 June 2029 · Passed above target</p></div>
     </div>
-    <div class="cert-grid">
+    <div class="cert-grid reveal-group">
       <div class="cert"><div class="badge">&#127891;</div><div><div class="c-name">B.Sc. (Hons) Automation &amp; Industrial Engineering</div><div class="c-meta">INSAT, Tunis · 2009</div></div></div>
       <div class="cert"><div class="badge">&#128736;</div><div><div class="c-name">PMP® Preparation Course — 35 PDUs</div><div class="c-meta">PM Tricks · Apr 2025</div></div></div>
       <div class="cert"><div class="badge">&#129516;</div><div><div class="c-name">Aseptic Technology</div><div class="c-meta">Tetra Pak Academy · Mar 2016</div></div></div>
@@ -399,7 +416,7 @@
     <span class="eyebrow" style="color:var(--accent2)">Get in touch</span>
     <h2 class="section-title">Let's talk</h2>
     <p class="section-sub">Open to Senior Project Manager opportunities. Full portfolio and references available to selected recruiters on request.</p>
-    <div class="contact-grid">
+    <div class="contact-grid reveal-group">
       <div class="cc">
         <div class="ico">&#9993;</div>
         <div class="k">Email</div>
@@ -420,6 +437,20 @@
 <div id="toast">✓ Email copied to clipboard</div>
 
 <script>
+  // ===== Scroll reveal (IntersectionObserver) =====
+  (function(){
+    var els=document.querySelectorAll('.reveal, .reveal-group');
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('in');}); return;
+    }
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
+    },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el);});
+  })();
+
   var MY_EMAIL = "medchaar@gmail.com";
   function showToast(msg){
     var t=document.getElementById('toast');
