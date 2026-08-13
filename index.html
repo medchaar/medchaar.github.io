@@ -308,9 +308,9 @@
       </div>
     </div>
 
-    <!-- INLINE REQUEST FORM -->
+    <!-- INLINE REQUEST FORM (email hidden via FormSubmit alias) -->
     <div class="req-form-wrap" id="reqFormWrap">
-      <form class="req-form" action="https://formsubmit.co/medchaar@gmail.com" method="POST" id="reqForm" onsubmit="return onReqSubmit(this)">
+      <form class="req-form" action="https://formsubmit.co/217a61538b2e2b811d700c9bdf215658" method="POST" id="reqForm" onsubmit="return onReqSubmit(this)">
         <div id="rfBody">
           <h4>Request view-only access</h4>
           <p class="rf-sub">Enter your details and I'll share the evidence-pack folder with your email.</p>
@@ -426,7 +426,7 @@
   function onReqSubmit(form){
     var data=new FormData(form);
     if(data.get('_honey')){return false;}
-    fetch('https://formsubmit.co/ajax/'+MY_EMAIL,{method:'POST',headers:{'Accept':'application/json'},body:data})
+    fetch('https://formsubmit.co/ajax/217a61538b2e2b811d700c9bdf215658',{method:'POST',headers:{'Accept':'application/json'},body:data})
       .then(function(r){return r.json();}).then(function(){
         document.getElementById('rfBody').style.display='none';
         document.getElementById('rfOk').style.display='block';
