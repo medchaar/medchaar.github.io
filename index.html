@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <meta name="theme-color" content="#0b2545">
 
-<!-- ============ Open Graph ============ -->
+<!-- ============ Open Graph (LinkedIn / Facebook / Teams) ============ -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Mohamed Chaar — Portfolio">
 <meta property="og:title" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager">
@@ -27,7 +27,7 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager">
 
-<!-- ============ Twitter / X ============ -->
+<!-- ============ Twitter / X card ============ -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mohamed Chaar, PMP® — Senior Engineering Project Manager">
 <meta name="twitter:description" content="Your partner for world-class FMCG project delivery. 12+ years, NZ$10M+ portfolio across dairy & food manufacturing.">
@@ -52,18 +52,17 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
   .brand{font-weight:800;color:var(--navy);font-size:1.12rem;letter-spacing:-.3px}
   .brand span{color:var(--accent)}
-  nav.menu a{margin-left:22px;font-size:.9rem;font-weight:600;color:var(--muted);transition:.2s}
+  nav.menu a{margin-left:26px;font-size:.92rem;font-weight:600;color:var(--muted);transition:.2s}
   nav.menu a:hover{color:var(--accent)}
-  .nav-cta{margin-left:22px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:6px;font-size:.86rem;font-weight:700}
+  .nav-cta{margin-left:26px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:6px;font-size:.88rem;font-weight:700}
   .burger{display:none;font-size:1.5rem;color:var(--navy);background:none;border:none;cursor:pointer}
-  @media(max-width:900px){nav.menu{display:none}.burger{display:block}}
+  @media(max-width:820px){nav.menu{display:none}.burger{display:block}}
 
   .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,var(--steel) 100%);color:#fff;position:relative;overflow:hidden;padding:104px 0 96px}
   .hero:before{content:"";position:absolute;right:-140px;top:-140px;width:460px;height:460px;background:radial-gradient(circle,rgba(0,165,181,.35),transparent 70%);border-radius:50%}
   .hero:after{content:"";position:absolute;left:-120px;bottom:-160px;width:420px;height:420px;background:radial-gradient(circle,rgba(217,164,65,.18),transparent 70%);border-radius:50%}
   .hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1.35fr .9fr;gap:48px;align-items:center}
-  .hero h1{font-size:3rem;line-height:1.08;letter-spacing:-1.2px;margin-bottom:6px}
-  .hero .sig{display:block;height:74px;margin:2px 0 14px -6px}
+  .hero h1{font-size:3rem;line-height:1.08;letter-spacing:-1.2px;margin-bottom:10px}
   .hero .role{font-size:1.28rem;color:var(--accent2);font-weight:600;margin-bottom:22px}
   .hero p.lead{font-size:1.06rem;color:#c8d4e2;max-width:560px;margin-bottom:32px}
   .hero-btns a{display:inline-block;margin-right:14px;margin-bottom:12px;padding:13px 26px;border-radius:8px;font-weight:700;font-size:.95rem;transition:.2s;cursor:pointer}
@@ -83,7 +82,7 @@
   .hero-card li:last-child{border-bottom:none}
   .hero-card li b{color:#fff}
   .tick{color:var(--accent2);font-weight:800;flex-shrink:0}
-  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:2.2rem}.hero .sig{height:60px}}
+  @media(max-width:820px){.hero .wrap{grid-template-columns:1fr}.hero h1{font-size:2.2rem}}
 
   .stats{background:var(--card);border-bottom:1px solid var(--line)}
   .stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:44px 24px}
@@ -92,16 +91,6 @@
   .stat .num span{color:var(--accent)}
   .stat .lbl{font-size:.86rem;color:var(--muted);margin-top:4px}
   @media(max-width:820px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:30px}}
-
-  /* ===== LOGOS STRIP ===== */
-  .logos-sec{background:var(--card);border-bottom:1px solid var(--line);padding:56px 0}
-  .logos-sec .lead-line{text-align:center;color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:2.5px;font-weight:700;margin-bottom:30px}
-  .logos-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;align-items:center}
-  .logo-item{background:#fff;border:1px solid var(--line);border-radius:12px;height:92px;display:flex;align-items:center;justify-content:center;padding:14px;transition:.25s;filter:grayscale(100%);opacity:.72}
-  .logo-item:hover{filter:grayscale(0%);opacity:1;transform:translateY(-3px);box-shadow:0 10px 24px rgba(11,37,69,.1);border-color:#cfe0ec}
-  .logo-item img{max-width:100%;max-height:100%;object-fit:contain}
-  @media(max-width:900px){.logos-grid{grid-template-columns:repeat(4,1fr)}}
-  @media(max-width:560px){.logos-grid{grid-template-columns:repeat(3,1fr)}}
 
   .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:52px;align-items:start}
   .about-grid p{margin-bottom:16px;color:var(--muted);font-size:1.02rem}
@@ -124,23 +113,6 @@
   .proj p{padding:12px 24px 22px;color:var(--muted);font-size:.94rem}
   .proj .impact{margin:0 24px 22px;padding-top:14px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--steel);font-weight:600}
   @media(max-width:820px){.proj-grid{grid-template-columns:1fr}}
-
-  /* ===== EXTENDED EXPERIENCE (timeline) ===== */
-  .exp-wrap{position:relative;margin-top:10px}
-  .exp{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:26px 28px;margin-bottom:22px;box-shadow:0 6px 22px rgba(11,37,69,.04)}
-  .exp.oilgas{border-left-color:var(--gold)}
-  .exp-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;margin-bottom:6px}
-  .exp-role{font-size:1.16rem;color:var(--navy);font-weight:700}
-  .exp-org{color:var(--accent);font-weight:600;font-size:.94rem}
-  .exp.oilgas .exp-org{color:#b9862a}
-  .exp-date{background:#eef4f8;color:var(--steel);font-size:.8rem;font-weight:700;padding:5px 12px;border-radius:6px;white-space:nowrap}
-  .exp p{color:var(--muted);font-size:.96rem;margin:10px 0 12px}
-  .exp ul{list-style:none;margin-top:8px}
-  .exp li{position:relative;padding-left:22px;color:var(--ink);font-size:.93rem;margin-bottom:8px}
-  .exp li:before{content:"▸";position:absolute;left:0;color:var(--accent);font-weight:800}
-  .exp.oilgas li:before{color:var(--gold)}
-  .exp .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
-  .exp .tag{background:#f0f4f8;color:var(--steel);font-size:.76rem;font-weight:600;padding:5px 11px;border-radius:16px}
 
   .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .rec{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:24px}
@@ -220,22 +192,25 @@
   #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:#0d7d4d;color:#fff;padding:13px 26px;border-radius:30px;font-weight:600;font-size:.92rem;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:200;transition:transform .35s cubic-bezier(.2,.9,.3,1.2);pointer-events:none}
   #toast.show{transform:translateX(-50%) translateY(0)}
 
-  footer{background:#081a30;color:#7d93a8;text-align:center;padding:34px 24px;font-size:.85rem}
+  footer{background:#081a30;color:#7d93a8;text-align:center;padding:26px 24px;font-size:.85rem}
   footer b{color:#fff}
-  footer .foot-sig{height:56px;margin:0 auto 14px;display:block;opacity:.9}
 
-  /* ===== Scroll reveal ===== */
+  /* ===== Subtle scroll reveal animations ===== */
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
   .reveal.in{opacity:1;transform:none}
+  /* staggered children (cards/quotes/certs) */
   .reveal-group>*{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
   .reveal-group.in>*{opacity:1;transform:none}
   .reveal-group.in>*:nth-child(1){transition-delay:.00s}
-  .reveal-group.in>*:nth-child(2){transition-delay:.06s}
-  .reveal-group.in>*:nth-child(3){transition-delay:.12s}
-  .reveal-group.in>*:nth-child(4){transition-delay:.18s}
-  .reveal-group.in>*:nth-child(5){transition-delay:.24s}
-  .reveal-group.in>*:nth-child(6){transition-delay:.30s}
-  @media(prefers-reduced-motion:reduce){.reveal,.reveal-group>*{opacity:1 !important;transform:none !important;transition:none !important}}
+  .reveal-group.in>*:nth-child(2){transition-delay:.07s}
+  .reveal-group.in>*:nth-child(3){transition-delay:.14s}
+  .reveal-group.in>*:nth-child(4){transition-delay:.21s}
+  .reveal-group.in>*:nth-child(5){transition-delay:.28s}
+  .reveal-group.in>*:nth-child(6){transition-delay:.35s}
+  /* respect users who prefer no motion */
+  @media(prefers-reduced-motion:reduce){
+    .reveal,.reveal-group>*{opacity:1 !important;transform:none !important;transition:none !important}
+  }
 </style>
 </head>
 <body>
@@ -246,7 +221,6 @@
     <nav class="menu">
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
-      <a href="#experience">Experience</a>
       <a href="#recognition">Recognition</a>
       <a href="#references">References</a>
       <a href="#certs">Certifications</a>
@@ -261,7 +235,6 @@
     <div>
       <span class="eyebrow">Senior Engineering Project Manager</span>
       <h1>Mohamed Chaar<span style="color:var(--gold)">, PMP®</span></h1>
-      <img class="sig" src="signature_white.png" alt="Mohamed Chaar signature">
       <div class="role">Your partner for world-class FMCG project delivery</div>
       <p class="lead">PMP-certified project leader with 12+ years delivering multimillion-dollar capital installations. Proven record applying PMBOK principles, ensuring GMP &amp; food safety compliance, and driving technical innovation for performance and sustainability.</p>
       <div class="hero-btns">
@@ -292,26 +265,6 @@
     <div class="stat"><div class="num">15<span>+</span></div><div class="lbl">Capital projects at Synlait</div></div>
     <div class="stat"><div class="num">$10M<span>+</span></div><div class="lbl">Current portfolio value (NZ$)</div></div>
     <div class="stat"><div class="num">PMP<span>®</span></div><div class="lbl">Certified — above target</div></div>
-  </div>
-</div>
-
-<!-- ===== LOGOS ===== -->
-<div class="logos-sec">
-  <div class="wrap">
-    <div class="lead-line reveal">Companies &amp; clients I've delivered for</div>
-    <div class="logos-grid reveal-group">
-      <div class="logo-item"><img src="logos/synlait.png" alt="Synlait"></div>
-      <div class="logo-item"><img src="logos/tetrapak.png" alt="Tetra Pak"></div>
-      <div class="logo-item"><img src="logos/fonterra.png" alt="Fonterra"></div>
-      <div class="logo-item"><img src="logos/westland.png" alt="Westland Milk Products"></div>
-      <div class="logo-item"><img src="logos/norco.png" alt="Norco"></div>
-      <div class="logo-item"><img src="logos/goodmanfielder.png" alt="Goodman Fielder"></div>
-      <div class="logo-item"><img src="logos/alfalaval.png" alt="Alfa Laval"></div>
-      <div class="logo-item"><img src="logos/sidel.png" alt="Sidel"></div>
-      <div class="logo-item"><img src="logos/abb.png" alt="ABB"></div>
-      <div class="logo-item"><img src="logos/eni.png" alt="Eni"></div>
-      <div class="logo-item"><img src="logos/shell.png" alt="Shell"></div>
-    </div>
   </div>
 </div>
 
@@ -358,62 +311,7 @@
   </div>
 </section>
 
-<!-- ===== EXTENDED EXPERIENCE ===== -->
-<section id="experience">
-  <div class="wrap">
-    <span class="eyebrow reveal">Career in Depth</span>
-    <h2 class="section-title reveal">Extended experience</h2>
-    <p class="section-sub">For recruiters who'd like the full story — my earlier project delivery at Tetra Pak Tunisia and my foundational Oil &amp; Gas control &amp; instrumentation career.</p>
-
-    <div class="exp-wrap">
-      <div class="exp reveal">
-        <div class="exp-head">
-          <div>
-            <div class="exp-role">Project &amp; Automation Engineer — Wet Process &amp; Materials Handling</div>
-            <div class="exp-org">Tetra Pak · Tunisia &amp; North Africa</div>
-          </div>
-          <div class="exp-date">2012 – 2016</div>
-        </div>
-        <p>Delivered turnkey processing and packaging projects across the Maghreb dairy &amp; beverage market — from pre-project engineering and quotation through to design, automation, commissioning and hand-over. Acted as the technical bridge between customers, Tetra Pak specialists and sub-suppliers.</p>
-        <ul>
-          <li>Led UHT line projects for leading dairy producers including <b>Soummam</b> and <b>Hodna Lait</b> — covering flavoured milk and chocolate/biscuit beverages, from process design to on-site commissioning.</li>
-          <li>Delivered a cold cream-dessert plant for <b>GIPA</b> and aseptic storage &amp; distribution tanks for <b>CLM (Centrale Laitière)</b>, integrating mixing, thermal treatment and CIP/SIP.</li>
-          <li>Produced pre-project engineering, process solution design and functional descriptions, and prepared technical quotations and budgets for major FMCG customers — <b>Nestlé, Danone, Coca-Cola</b> and <b>Cevital</b>.</li>
-          <li>Managed project budgets, procurement and progress via <b>SAP</b>, coordinating cross-functional teams and sub-contractors to keep scope, cost and schedule on track.</li>
-          <li>Owned FAT/SAT, commissioning, performance testing and operator training — ensuring GMP and food-safety compliance at start-up.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">UHT / Aseptic</span><span class="tag">CIP / SIP</span><span class="tag">Process Solution Design</span><span class="tag">SAP</span><span class="tag">Commissioning</span><span class="tag">Customer Management</span>
-        </div>
-      </div>
-
-      <div class="exp oilgas reveal">
-        <div class="exp-head">
-          <div>
-            <div class="exp-role">Control &amp; Instrumentation Engineer — Oil &amp; Gas</div>
-            <div class="exp-org">EMCO · British Gas Tunisia · EPPM</div>
-          </div>
-          <div class="exp-date">2009 – 2012</div>
-        </div>
-        <p>Foundational career delivering instrumentation, control and safety systems for upstream and midstream Oil &amp; Gas facilities across North Africa — spanning design, integration, factory acceptance testing and field commissioning for major international operators.</p>
-        <ul>
-          <li>Engineered and commissioned <b>ICSS / DCS &amp; ESD</b> systems for operators including <b>ENI</b>, <b>Sonatrach-Agip</b>, <b>Mellitah Oil &amp; Gas</b>, <b>GNPOC</b> and <b>Arabian Gulf Oil Company</b>.</li>
-          <li>Worked hands-on with control &amp; safety platforms such as <b>HIMA</b> (safety PLC/ESD), <b>Yokogawa</b> and <b>ABB System 800xA</b> — configuration, logic and I/O integration.</li>
-          <li>Executed <b>FAT</b> at vendor facilities and <b>SAT / field commissioning</b> on wellheads, gas-processing and metering skids, including loop checks and instrument calibration.</li>
-          <li>Prepared instrumentation datasheets, loop diagrams, cause-&amp;-effect matrices and commissioning documentation to international O&amp;G standards.</li>
-          <li>Coordinated with EPC contractors and client teams to close punch-lists and achieve safe, on-schedule start-ups in demanding field environments.</li>
-        </ul>
-        <div class="tags">
-          <span class="tag">ICSS / DCS</span><span class="tag">ESD / Safety Systems</span><span class="tag">HIMA</span><span class="tag">Yokogawa</span><span class="tag">ABB 800xA</span><span class="tag">FAT / SAT</span><span class="tag">Commissioning</span>
-        </div>
-      </div>
-    </div>
-
-    <p style="margin-top:20px;color:var(--muted);font-size:.9rem">Full role detail, project references and dates are available in the private evidence pack on request.</p>
-  </div>
-</section>
-
-<section id="recognition" style="background:var(--card)">
+<section id="recognition">
   <div class="wrap">
     <span class="eyebrow reveal">Awards &amp; Recognition</span>
     <h2 class="section-title reveal">Recognised for safety, spirit &amp; care</h2>
@@ -456,6 +354,7 @@
       </div>
     </div>
 
+    <!-- INLINE REQUEST FORM (email hidden via FormSubmit alias) -->
     <div class="req-form-wrap" id="reqFormWrap">
       <form class="req-form" action="https://formsubmit.co/217a61538b2e2b811d700c9bdf215658" method="POST" id="reqForm" onsubmit="return onReqSubmit(this)">
         <div id="rfBody">
@@ -488,7 +387,7 @@
   </div>
 </section>
 
-<section id="certs" style="background:var(--card)">
+<section id="certs">
   <div class="wrap">
     <span class="eyebrow reveal">Credentials</span>
     <h2 class="section-title reveal">Certifications &amp; training</h2>
@@ -531,7 +430,6 @@
 </section>
 
 <footer>
-  <img class="foot-sig" src="signature_dark.png" alt="Mohamed Chaar signature" style="filter:brightness(0) invert(.55)">
   &copy; 2026 <b>Mohamed Chaar, PMP®</b> · Senior Engineering Project Manager · Canterbury, New Zealand<br>
   Private professional portfolio — shared by invitation.
 </footer>
@@ -539,18 +437,24 @@
 <div id="toast">✓ Email copied to clipboard</div>
 
 <script>
+  // ===== Scroll reveal (IntersectionObserver) =====
   (function(){
     var els=document.querySelectorAll('.reveal, .reveal-group');
-    if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
+    if(!('IntersectionObserver' in window)){
+      els.forEach(function(el){el.classList.add('in');}); return;
+    }
     var io=new IntersectionObserver(function(entries){
-      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+      entries.forEach(function(en){
+        if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+      });
     },{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(el){io.observe(el);});
   })();
 
   var MY_EMAIL = "medchaar@gmail.com";
   function showToast(msg){
-    var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
+    var t=document.getElementById('toast');
+    t.textContent=msg;t.classList.add('show');
     clearTimeout(window.__t);window.__t=setTimeout(function(){t.classList.remove('show');},2200);
   }
   function copyEmail(){
@@ -563,23 +467,31 @@
     try{document.execCommand('copy');showToast('✓ '+MY_EMAIL+' copied');}catch(e){showToast(MY_EMAIL);}
     document.body.removeChild(ta);
   }
-  function scrollToRequestTop(){document.getElementById('request').scrollIntoView({behavior:'smooth',block:'start'});}
+  function scrollToRequestTop(){
+    document.getElementById('request').scrollIntoView({behavior:'smooth',block:'start'});
+  }
   function openRequestFromHero(e){
     if(e){e.preventDefault();}
     var w=document.getElementById('reqFormWrap');
-    if(!w.classList.contains('open')){w.classList.add('open');document.getElementById('reqToggleBtn').textContent='Hide request form';}
+    if(!w.classList.contains('open')){
+      w.classList.add('open');
+      document.getElementById('reqToggleBtn').textContent='Hide request form';
+    }
     setTimeout(scrollToRequestTop,450);
   }
   function toggleRequestForm(){
-    var w=document.getElementById('reqFormWrap');var open=w.classList.toggle('open');
+    var w=document.getElementById('reqFormWrap');
+    var open=w.classList.toggle('open');
     document.getElementById('reqToggleBtn').textContent=open?'Hide request form':'Request Access';
     if(open){setTimeout(scrollToRequestTop,450);}
   }
   function onReqSubmit(form){
-    var data=new FormData(form);if(data.get('_honey')){return false;}
+    var data=new FormData(form);
+    if(data.get('_honey')){return false;}
     fetch('https://formsubmit.co/ajax/217a61538b2e2b811d700c9bdf215658',{method:'POST',headers:{'Accept':'application/json'},body:data})
       .then(function(r){return r.json();}).then(function(){
-        document.getElementById('rfBody').style.display='none';document.getElementById('rfOk').style.display='block';
+        document.getElementById('rfBody').style.display='none';
+        document.getElementById('rfOk').style.display='block';
       }).catch(function(){form.submit();});
     return false;
   }
