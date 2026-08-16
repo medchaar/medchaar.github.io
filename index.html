@@ -52,11 +52,11 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
   .brand{font-weight:800;color:var(--navy);font-size:1.12rem;letter-spacing:-.3px}
   .brand span{color:var(--accent)}
-  nav.menu a{margin-left:22px;font-size:.9rem;font-weight:600;color:var(--muted);transition:.2s}
+  nav.menu a{margin-left:20px;font-size:.88rem;font-weight:600;color:var(--muted);transition:.2s}
   nav.menu a:hover{color:var(--accent)}
-  .nav-cta{margin-left:22px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:6px;font-size:.86rem;font-weight:700}
+  .nav-cta{margin-left:20px;background:var(--accent);color:#fff;padding:9px 18px;border-radius:6px;font-size:.84rem;font-weight:700}
   .burger{display:none;font-size:1.5rem;color:var(--navy);background:none;border:none;cursor:pointer}
-  @media(max-width:900px){nav.menu{display:none}.burger{display:block}}
+  @media(max-width:980px){nav.menu{display:none}.burger{display:block}}
 
   .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,var(--steel) 100%);color:#fff;position:relative;overflow:hidden;padding:104px 0 96px}
   .hero:before{content:"";position:absolute;right:-140px;top:-140px;width:460px;height:460px;background:radial-gradient(circle,rgba(0,165,181,.35),transparent 70%);border-radius:50%}
@@ -94,7 +94,7 @@
   .stat .lbl{font-size:.86rem;color:var(--muted);margin-top:4px}
   @media(max-width:820px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:30px}}
 
-  /* ===== LOGOS (natural colour, larger tiles, lift+zoom hover) ===== */
+  /* ===== LOGOS ===== */
   .logos-sec{background:var(--card);border-bottom:1px solid var(--line);padding:60px 0}
   .logos-sec .top-line{text-align:center;color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:2.5px;font-weight:700;margin-bottom:8px}
   .logos-sec h2{text-align:center;color:var(--navy);font-size:1.7rem;margin-bottom:40px;letter-spacing:-.4px}
@@ -131,6 +131,36 @@
   .proj p{padding:12px 24px 22px;color:var(--muted);font-size:.94rem}
   .proj .impact{margin:0 24px 22px;padding-top:14px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--steel);font-weight:600}
   @media(max-width:820px){.proj-grid{grid-template-columns:1fr}}
+
+  /* ===== PROJECT GALLERY ===== */
+  #gallery{background:var(--bg)}
+  .gal-project{margin-bottom:44px}
+  .gal-project:last-child{margin-bottom:0}
+  .gal-head{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .gal-head h3{font-size:1.2rem;color:var(--navy);white-space:nowrap;font-weight:700}
+  .gal-head:after{content:"";height:2px;background:linear-gradient(90deg,var(--accent),transparent);flex:1;border-radius:2px}
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .gal-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;background:#000;border:1px solid var(--line);box-shadow:0 6px 20px rgba(11,37,69,.06);aspect-ratio:4/3}
+  .gal-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease,opacity .3s ease}
+  .gal-item:hover img{transform:scale(1.08);opacity:.9}
+  .gal-cap{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;background:linear-gradient(transparent,rgba(11,37,69,.85));color:#fff;font-size:.9rem;font-weight:600;display:flex;align-items:center;gap:8px}
+  .gal-cap .zoom{margin-left:auto;opacity:0;transform:translateY(4px);transition:.25s;font-size:1rem}
+  .gal-item:hover .gal-cap .zoom{opacity:1;transform:none}
+  @media(max-width:820px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:520px){.gal-grid{grid-template-columns:1fr}}
+
+  /* Lightbox */
+  #lightbox{position:fixed;inset:0;z-index:300;background:rgba(6,16,30,.94);display:none;align-items:center;justify-content:center;padding:40px;flex-direction:column}
+  #lightbox.open{display:flex}
+  #lightbox img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.5);object-fit:contain}
+  #lightbox .lb-cap{color:#fff;margin-top:16px;font-size:1rem;font-weight:600;text-align:center}
+  #lightbox .lb-count{color:#9fb3c8;font-size:.85rem;margin-top:4px}
+  .lb-btn{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;user-select:none}
+  .lb-btn:hover{background:rgba(255,255,255,.25)}
+  #lbClose{top:24px;right:24px;font-size:1.3rem}
+  #lbPrev{left:24px;top:50%;transform:translateY(-50%)}
+  #lbNext{right:24px;top:50%;transform:translateY(-50%)}
+  @media(max-width:600px){#lbPrev,#lbNext{width:40px;height:40px;font-size:1.2rem}#lbPrev{left:8px}#lbNext{right:8px}}
 
   /* ===== EXTENDED EXPERIENCE ===== */
   .exp{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:26px 28px;margin-bottom:22px;box-shadow:0 6px 22px rgba(11,37,69,.04)}
@@ -223,7 +253,7 @@
   .cc .copy-hint{display:block;font-size:.74rem;color:#7d93a8;margin-top:8px;font-weight:400}
   @media(max-width:820px){.contact-grid{grid-template-columns:1fr}}
 
-  #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:#0d7d4d;color:#fff;padding:13px 26px;border-radius:30px;font-weight:600;font-size:.92rem;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:200;transition:transform .35s cubic-bezier(.2,.9,.3,1.2);pointer-events:none}
+  #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:#0d7d4d;color:#fff;padding:13px 26px;border-radius:30px;font-weight:600;font-size:.92rem;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:400;transition:transform .35s cubic-bezier(.2,.9,.3,1.2);pointer-events:none}
   #toast.show{transform:translateX(-50%) translateY(0)}
 
   footer{background:#081a30;color:#7d93a8;text-align:center;padding:34px 24px;font-size:.85rem}
@@ -252,6 +282,7 @@
     <nav class="menu">
       <a href="#about">About</a>
       <a href="#portfolio">Portfolio</a>
+      <a href="#gallery">Gallery</a>
       <a href="#experience">Experience</a>
       <a href="#recognition">Recognition</a>
       <a href="#references">References</a>
@@ -392,8 +423,88 @@
   </div>
 </section>
 
+<!-- ===== PROJECT GALLERY ===== -->
+<section id="gallery">
+  <div class="wrap">
+    <span class="eyebrow reveal">On the Ground</span>
+    <h2 class="section-title reveal">Project gallery</h2>
+    <p class="section-sub">Selected photos from delivered installations — click any image to enlarge.</p>
+
+    <div class="gal-project reveal">
+      <div class="gal-head"><h3>Custom Foods (Australia) — Powder Bag Tips</h3></div>
+      <div class="gal-grid reveal-group" data-gallery="customfoods">
+        <div class="gal-item" onclick="openLightbox('customfoods',0)"><img src="gallery/cf_tipping_room_thumb.jpg" alt="Tipping Room" loading="lazy"><div class="gal-cap">Tipping Room<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('customfoods',1)"><img src="gallery/cf_25kg_powder_bag_tip_thumb.jpg" alt="25kg Powder Bag Tip" loading="lazy"><div class="gal-cap">25kg Powder Bag Tip<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('customfoods',2)"><img src="gallery/cf_25kg_semiauto_bag_tip_thumb.jpg" alt="25kg Semi-auto Bag Tip" loading="lazy"><div class="gal-cap">25kg Semi-auto Bag Tip<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('customfoods',3)"><img src="gallery/cf_powder_mixer_thumb.jpg" alt="Powder Mixer" loading="lazy"><div class="gal-cap">Powder Mixer<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('customfoods',4)"><img src="gallery/cf_tipping_conveyor_thumb.jpg" alt="Tipping Conveyor" loading="lazy"><div class="gal-cap">Tipping Conveyor<span class="zoom">&#128269;</span></div></div>
+      </div>
+    </div>
+
+    <div class="gal-project reveal">
+      <div class="gal-head"><h3>Fonterra (New Zealand) — Powder Sifters Upgrade · 2023</h3></div>
+      <div class="gal-grid reveal-group" data-gallery="fonterrasifters">
+        <div class="gal-item" onclick="openLightbox('fonterrasifters',0)"><img src="gallery/fs_sifter_overview_thumb.jpg" alt="Sifter Overview" loading="lazy"><div class="gal-cap">Sifter Overview<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('fonterrasifters',1)"><img src="gallery/fs_sifter_hatches_thumb.jpg" alt="Sifter Hatches" loading="lazy"><div class="gal-cap">Sifter Hatches<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('fonterrasifters',2)"><img src="gallery/fs_sifter_platform_thumb.jpg" alt="Sifter Platform" loading="lazy"><div class="gal-cap">Sifter Platform<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('fonterrasifters',3)"><img src="gallery/fs_sifter_vibrators_thumb.jpg" alt="Sifter Vibrators" loading="lazy"><div class="gal-cap">Sifter Vibrators<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('fonterrasifters',4)"><img src="gallery/fs_fluidbed_tundish_thumb.jpg" alt="Fluidbed Tundish" loading="lazy"><div class="gal-cap">Fluidbed Tundish<span class="zoom">&#128269;</span></div></div>
+      </div>
+    </div>
+
+    <div class="gal-project reveal">
+      <div class="gal-head"><h3>Great Lakes Cheese (USA) — WPC &amp; Permeate Driers</h3></div>
+      <div class="gal-grid reveal-group" data-gallery="greatlakes">
+        <div class="gal-item" onclick="openLightbox('greatlakes',0)"><img src="gallery/glc_process_plant_thumb.jpg" alt="Process Plant" loading="lazy"><div class="gal-cap">Process Plant<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',1)"><img src="gallery/glc_warehouse_thumb.jpg" alt="Warehouse" loading="lazy"><div class="gal-cap">Warehouse<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',2)"><img src="gallery/glc_mozzarella_vat_thumb.jpg" alt="Mozzarella Cheese Vat" loading="lazy"><div class="gal-cap">Mozzarella Cheese Vat<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',3)"><img src="gallery/glc_vacuum_pump_room_thumb.jpg" alt="Vacuum Pump Room" loading="lazy"><div class="gal-cap">Vacuum Pump Room<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',4)"><img src="gallery/glc_dust_collectors_thumb.jpg" alt="Dust Collectors" loading="lazy"><div class="gal-cap">Dust Collectors<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',5)"><img src="gallery/glc_baghouse_rotary_valves_thumb.jpg" alt="Baghouse &amp; Start Stop Rotary Valves" loading="lazy"><div class="gal-cap">Baghouse &amp; Start Stop Rotary Valves<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',6)"><img src="gallery/glc_start_stop_outlet_thumb.jpg" alt="Start Stop Outlet" loading="lazy"><div class="gal-cap">Start Stop Outlet<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',7)"><img src="gallery/glc_brine_salt_discharger_thumb.jpg" alt="Brine Salt Discharger" loading="lazy"><div class="gal-cap">Brine Salt Discharger<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('greatlakes',8)"><img src="gallery/glc_jmp_palletiser_thumb.jpg" alt="JMP Palletiser" loading="lazy"><div class="gal-cap">JMP Palletiser<span class="zoom">&#128269;</span></div></div>
+      </div>
+    </div>
+
+    <div class="gal-project reveal">
+      <div class="gal-head"><h3>Fonterra (New Zealand) — Pregassers &amp; Powder Transport Upgrade</h3></div>
+      <div class="gal-grid reveal-group" data-gallery="pregassers">
+        <div class="gal-item" onclick="openLightbox('pregassers',0)"><img src="gallery/pg_fonterra_plant_thumb.jpg" alt="Fonterra Plant" loading="lazy"><div class="gal-cap">Fonterra Plant<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',1)"><img src="gallery/pg_upper_bin_room_thumb.jpg" alt="Upper Bin Room" loading="lazy"><div class="gal-cap">Upper Bin Room<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',2)"><img src="gallery/pg_lower_bin_room_thumb.jpg" alt="Lower Bin Room" loading="lazy"><div class="gal-cap">Lower Bin Room<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',3)"><img src="gallery/pg_powder_bins_new_bustles_thumb.jpg" alt="Powder Bins New Bustles" loading="lazy"><div class="gal-cap">Powder Bins New Bustles<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',4)"><img src="gallery/pg_powder_bins_purge_line_thumb.jpg" alt="Powder Bins Purge Line" loading="lazy"><div class="gal-cap">Powder Bins Purge Line<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',5)"><img src="gallery/pg_bin_room_piperack_thumb.jpg" alt="Bin Room Piperack" loading="lazy"><div class="gal-cap">Bin Room Piperack<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',6)"><img src="gallery/pg_fluidbed_and_sifter_thumb.jpg" alt="Fluidbed and Sifter" loading="lazy"><div class="gal-cap">Fluidbed and Sifter<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',7)"><img src="gallery/pg_fines_lines_diverters_thumb.jpg" alt="Fines Lines Diverters" loading="lazy"><div class="gal-cap">Fines Lines Diverters<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',8)"><img src="gallery/pg_fines_lines_diverters_control_panel_thumb.jpg" alt="Fines Lines Diverters Control Panel" loading="lazy"><div class="gal-cap">Fines Lines Diverters Control Panel<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',9)"><img src="gallery/pg_packing_room_recovery_lines_thumb.jpg" alt="Packing Room Recovery Lines" loading="lazy"><div class="gal-cap">Packing Room Recovery Lines<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',10)"><img src="gallery/pg_packing_room_bags_recovery_bag_tips_thumb.jpg" alt="Packing Room Bags Recovery Bag Tips" loading="lazy"><div class="gal-cap">Packing Room Bags Recovery Bag Tips<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('pregassers',11)"><img src="gallery/pg_commissioning_control_room_thumb.jpg" alt="Commissioning in Control Room" loading="lazy"><div class="gal-cap">Commissioning in Control Room<span class="zoom">&#128269;</span></div></div>
+      </div>
+    </div>
+
+    <div class="gal-project reveal">
+      <div class="gal-head"><h3>Synlait (New Zealand) — Chilled &amp; Aseptic Milk Line</h3></div>
+      <div class="gal-grid reveal-group" data-gallery="aseptic">
+        <div class="gal-item" onclick="openLightbox('aseptic',0)"><img src="gallery/sy_overhead_fresh_milk_conveyor_thumb.jpg" alt="Overhead Fresh Milk Bottle Conveyor" loading="lazy"><div class="gal-cap">Overhead Fresh Milk Bottle Conveyor<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',1)"><img src="gallery/sy_sidel_accumulation_conveyor_thumb.jpg" alt="Sidel Accumulation Conveyor" loading="lazy"><div class="gal-cap">Sidel Accumulation Conveyor<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',2)"><img src="gallery/sy_sidel_accumulation_to_drier_thumb.jpg" alt="Sidel Accumulation to Bottle Drier" loading="lazy"><div class="gal-cap">Sidel Accumulation to Bottle Drier<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',3)"><img src="gallery/sy_sidel_filler_decontamination_thumb.jpg" alt="Sidel Filler Decontamination Screen" loading="lazy"><div class="gal-cap">Sidel Filler Decontamination Screen<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',4)"><img src="gallery/sy_labeller_to_serac_filler_thumb.jpg" alt="Conveyors from Labeller to Serac Filler" loading="lazy"><div class="gal-cap">Conveyors from Labeller to Serac Filler<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',5)"><img src="gallery/sy_spiral_conveyors_crates_thumb.jpg" alt="Spiral Conveyors for Empty &amp; Full Crates" loading="lazy"><div class="gal-cap">Spiral Conveyors for Empty &amp; Full Crates<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',6)"><img src="gallery/sy_bottles_debagger_robots_thumb.jpg" alt="Bottles Debagger Robot Stations" loading="lazy"><div class="gal-cap">Bottles Debagger Robot Stations<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',7)"><img src="gallery/sy_ambient_cream_shrink_sleever_thumb.jpg" alt="Ambient Cream Bottles to Shrink Sleever" loading="lazy"><div class="gal-cap">Ambient Cream Bottles to Shrink Sleever<span class="zoom">&#128269;</span></div></div>
+        <div class="gal-item" onclick="openLightbox('aseptic',8)"><img src="gallery/sy_palletiser_shrink_wrapping_thumb.jpg" alt="Palletiser &amp; Shrink Wrapping" loading="lazy"><div class="gal-cap">Palletiser &amp; Shrink Wrapping<span class="zoom">&#128269;</span></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- ===== EXTENDED EXPERIENCE ===== -->
-<section id="experience">
+<section id="experience" style="background:var(--card)">
   <div class="wrap">
     <span class="eyebrow reveal">Career in Depth</span>
     <h2 class="section-title reveal">Extended experience</h2>
@@ -445,7 +556,7 @@
   </div>
 </section>
 
-<section id="recognition" style="background:var(--card)">
+<section id="recognition">
   <div class="wrap">
     <span class="eyebrow reveal">Awards &amp; Recognition</span>
     <h2 class="section-title reveal">Recognised for safety, spirit &amp; care</h2>
@@ -568,6 +679,16 @@
   Private professional portfolio — shared by invitation.
 </footer>
 
+<!-- ===== LIGHTBOX ===== -->
+<div id="lightbox" onclick="if(event.target.id==='lightbox')closeLightbox()">
+  <button class="lb-btn" id="lbClose" onclick="closeLightbox()">&#10005;</button>
+  <button class="lb-btn" id="lbPrev" onclick="lbStep(-1)">&#10094;</button>
+  <button class="lb-btn" id="lbNext" onclick="lbStep(1)">&#10095;</button>
+  <img id="lbImg" src="" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+  <div class="lb-count" id="lbCount"></div>
+</div>
+
 <div id="toast">✓ Email copied to clipboard</div>
 
 <script>
@@ -579,6 +700,86 @@
     },{threshold:0.10,rootMargin:'0px 0px -6% 0px'});
     els.forEach(function(el){io.observe(el);});
   })();
+
+  /* ===== Lightbox gallery ===== */
+  var GALLERIES={
+    customfoods:[
+      {src:"gallery/cf_tipping_room.jpg",cap:"Tipping Room"},
+      {src:"gallery/cf_25kg_powder_bag_tip.jpg",cap:"25kg Powder Bag Tip"},
+      {src:"gallery/cf_25kg_semiauto_bag_tip.jpg",cap:"25kg Semi-auto Bag Tip"},
+      {src:"gallery/cf_powder_mixer.jpg",cap:"Powder Mixer"},
+      {src:"gallery/cf_tipping_conveyor.jpg",cap:"Tipping Conveyor"}
+    ],
+    fonterrasifters:[
+      {src:"gallery/fs_sifter_overview.jpg",cap:"Sifter Overview"},
+      {src:"gallery/fs_sifter_hatches.jpg",cap:"Sifter Hatches"},
+      {src:"gallery/fs_sifter_platform.jpg",cap:"Sifter Platform"},
+      {src:"gallery/fs_sifter_vibrators.jpg",cap:"Sifter Vibrators"},
+      {src:"gallery/fs_fluidbed_tundish.jpg",cap:"Fluidbed Tundish"}
+    ],
+    greatlakes:[
+      {src:"gallery/glc_process_plant.jpg",cap:"Process Plant"},
+      {src:"gallery/glc_warehouse.jpg",cap:"Warehouse"},
+      {src:"gallery/glc_mozzarella_vat.jpg",cap:"Mozzarella Cheese Vat"},
+      {src:"gallery/glc_vacuum_pump_room.jpg",cap:"Vacuum Pump Room"},
+      {src:"gallery/glc_dust_collectors.jpg",cap:"Dust Collectors"},
+      {src:"gallery/glc_baghouse_rotary_valves.jpg",cap:"Baghouse & Start Stop Rotary Valves"},
+      {src:"gallery/glc_start_stop_outlet.jpg",cap:"Start Stop Outlet"},
+      {src:"gallery/glc_brine_salt_discharger.jpg",cap:"Brine Salt Discharger"},
+      {src:"gallery/glc_jmp_palletiser.jpg",cap:"JMP Palletiser"}
+    ],
+    pregassers:[
+      {src:"gallery/pg_fonterra_plant.jpg",cap:"Fonterra Plant"},
+      {src:"gallery/pg_upper_bin_room.jpg",cap:"Upper Bin Room"},
+      {src:"gallery/pg_lower_bin_room.jpg",cap:"Lower Bin Room"},
+      {src:"gallery/pg_powder_bins_new_bustles.jpg",cap:"Powder Bins New Bustles"},
+      {src:"gallery/pg_powder_bins_purge_line.jpg",cap:"Powder Bins Purge Line"},
+      {src:"gallery/pg_bin_room_piperack.jpg",cap:"Bin Room Piperack"},
+      {src:"gallery/pg_fluidbed_and_sifter.jpg",cap:"Fluidbed and Sifter"},
+      {src:"gallery/pg_fines_lines_diverters.jpg",cap:"Fines Lines Diverters"},
+      {src:"gallery/pg_fines_lines_diverters_control_panel.jpg",cap:"Fines Lines Diverters Control Panel"},
+      {src:"gallery/pg_packing_room_recovery_lines.jpg",cap:"Packing Room Recovery Lines"},
+      {src:"gallery/pg_packing_room_bags_recovery_bag_tips.jpg",cap:"Packing Room Bags Recovery Bag Tips"},
+      {src:"gallery/pg_commissioning_control_room.jpg",cap:"Commissioning in Control Room"}
+    ],
+    aseptic:[
+      {src:"gallery/sy_overhead_fresh_milk_conveyor.jpg",cap:"Overhead Fresh Milk Bottle Conveyor"},
+      {src:"gallery/sy_sidel_accumulation_conveyor.jpg",cap:"Sidel Accumulation Conveyor"},
+      {src:"gallery/sy_sidel_accumulation_to_drier.jpg",cap:"Sidel Accumulation to Bottle Drier"},
+      {src:"gallery/sy_sidel_filler_decontamination.jpg",cap:"Sidel Filler Decontamination Screen"},
+      {src:"gallery/sy_labeller_to_serac_filler.jpg",cap:"Conveyors from Labeller to Serac Filler"},
+      {src:"gallery/sy_spiral_conveyors_crates.jpg",cap:"Spiral Conveyors for Empty & Full Crates"},
+      {src:"gallery/sy_bottles_debagger_robots.jpg",cap:"Bottles Debagger Robot Stations"},
+      {src:"gallery/sy_ambient_cream_shrink_sleever.jpg",cap:"Ambient Cream Bottles to Shrink Sleever"},
+      {src:"gallery/sy_palletiser_shrink_wrapping.jpg",cap:"Palletiser & Shrink Wrapping"}
+    ]
+  };
+  var lbKey=null,lbIdx=0;
+  function renderLb(){
+    var arr=GALLERIES[lbKey];var item=arr[lbIdx];
+    document.getElementById('lbImg').src=item.src;
+    document.getElementById('lbImg').alt=item.cap;
+    document.getElementById('lbCap').textContent=item.cap;
+    document.getElementById('lbCount').textContent=(lbIdx+1)+' / '+arr.length;
+  }
+  function openLightbox(key,idx){
+    lbKey=key;lbIdx=idx;renderLb();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow='hidden';
+  }
+  function closeLightbox(){
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow='';
+  }
+  function lbStep(d){
+    var arr=GALLERIES[lbKey];lbIdx=(lbIdx+d+arr.length)%arr.length;renderLb();
+  }
+  document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightbox').classList.contains('open'))return;
+    if(e.key==='Escape')closeLightbox();
+    else if(e.key==='ArrowLeft')lbStep(-1);
+    else if(e.key==='ArrowRight')lbStep(1);
+  });
 
   var MY_EMAIL = "medchaar@gmail.com";
   function showToast(msg){
