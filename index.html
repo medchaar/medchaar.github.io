@@ -39,7 +39,6 @@
   .section-sub{color:var(--muted);margin-bottom:44px;font-size:1.02rem}
   .eyebrow{display:inline-block;text-transform:uppercase;letter-spacing:2.5px;font-size:.74rem;font-weight:700;color:var(--accent);margin-bottom:14px}
 
-  /* scroll progress bar */
   #progress{position:fixed;top:0;left:0;height:4px;width:0;z-index:60;background:linear-gradient(90deg,var(--accent),var(--gold));box-shadow:0 0 8px rgba(0,165,181,.5);transition:width .1s linear}
 
   header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
@@ -84,7 +83,6 @@
   .stat .lbl{font-size:.86rem;color:var(--muted);margin-top:4px}
   @media(max-width:820px){.stats .wrap{grid-template-columns:repeat(2,1fr);gap:30px}}
 
-  /* LOGOS */
   .logos-sec{background:var(--card);border-bottom:1px solid var(--line);padding:60px 0}
   .logos-sec .top-line{text-align:center;color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:2.5px;font-weight:700;margin-bottom:8px}
   .logos-sec h2{text-align:center;color:var(--navy);font-size:1.7rem;margin-bottom:40px;letter-spacing:-.4px}
@@ -121,7 +119,6 @@
   .proj .impact{margin:0 24px 22px;padding-top:14px;border-top:1px dashed var(--line);font-size:.88rem;color:var(--steel);font-weight:600}
   @media(max-width:820px){.proj-grid{grid-template-columns:1fr}}
 
-  /* ===== PROJECT GALLERY (collapsible, half-size thumbs) ===== */
   #gallery{background:var(--bg)}
   .gal-hint{color:var(--muted);font-size:.86rem;margin:-30px 0 30px;display:flex;align-items:center;gap:8px}
   .gal-hint b{color:var(--accent)}
@@ -143,7 +140,6 @@
   @media(max-width:900px){.gal-grid{grid-template-columns:repeat(4,1fr)}}
   @media(max-width:560px){.gal-grid{grid-template-columns:repeat(3,1fr)}.gal-cap{font-size:.6rem}}
 
-  /* Lightbox */
   #lightbox{position:fixed;inset:0;z-index:300;background:rgba(6,16,30,.94);display:none;align-items:center;justify-content:center;padding:40px;flex-direction:column}
   #lightbox.open{display:flex}
   #lightbox img{max-width:92vw;max-height:80vh;border-radius:10px;box-shadow:0 24px 60px rgba(0,0,0,.5);object-fit:contain}
@@ -151,9 +147,7 @@
   #lightbox .lb-count{color:#9fb3c8;font-size:.85rem;margin-top:4px}
   .lb-btn{position:absolute;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:#fff;width:48px;height:48px;border-radius:50%;font-size:1.5rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.2s;user-select:none}
   .lb-btn:hover{background:rgba(255,255,255,.25)}
-  #lbClose{top:24px;right:24px;font-size:1.3rem}
-  #lbPrev{left:24px;top:50%;transform:translateY(-50%)}
-  #lbNext{right:24px;top:50%;transform:translateY(-50%)}
+  #lbClose{top:24px;right:24px;font-size:1.3rem}#lbPrev{left:24px;top:50%;transform:translateY(-50%)}#lbNext{right:24px;top:50%;transform:translateY(-50%)}
   @media(max-width:600px){#lbPrev,#lbNext{width:40px;height:40px;font-size:1.2rem}#lbPrev{left:8px}#lbNext{right:8px}}
 
   .exp{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:26px 28px;margin-bottom:22px;box-shadow:0 6px 22px rgba(11,37,69,.04)}
@@ -172,9 +166,10 @@
   .exp .tag{background:#f0f4f8;color:var(--steel);font-size:.76rem;font-weight:600;padding:5px 11px;border-radius:16px}
 
   .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .rec{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:24px}
+  .rec{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:10px;padding:24px;transition:.25s}
+  .rec:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(11,37,69,.1);border-color:#e6d3a8}
   .rec .cat{font-size:.72rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--gold);font-weight:800;margin-bottom:10px}
-  .rec p{font-size:.92rem;color:var(--ink);margin-bottom:14px}
+  .rec p{font-size:.9rem;color:var(--ink);margin-bottom:14px}
   .rec .by{font-size:.82rem;color:var(--muted)}.rec .by b{color:var(--steel)}
   @media(max-width:820px){.rec-grid{grid-template-columns:1fr}}
 
@@ -245,7 +240,6 @@
   #toast{position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(120px);background:#0d7d4d;color:#fff;padding:13px 26px;border-radius:30px;font-weight:600;font-size:.92rem;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:400;transition:transform .35s cubic-bezier(.2,.9,.3,1.2);pointer-events:none}
   #toast.show{transform:translateX(-50%) translateY(0)}
 
-  /* back to top */
   #toTop{position:fixed;bottom:26px;right:26px;width:48px;height:48px;border-radius:50%;background:var(--accent);color:#fff;border:none;font-size:1.3rem;cursor:pointer;box-shadow:0 8px 24px rgba(0,165,181,.4);opacity:0;transform:translateY(20px) scale(.8);pointer-events:none;transition:.3s;z-index:120;display:flex;align-items:center;justify-content:center}
   #toTop.show{opacity:1;transform:none;pointer-events:auto}
   #toTop:hover{background:var(--accent2);transform:translateY(-3px)}
@@ -254,7 +248,6 @@
   footer b{color:#fff}
   footer .foot-sig{height:56px;margin:0 auto 14px;display:block;opacity:.9}
 
-  /* Scroll reveal */
   .reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);will-change:opacity,transform}
   .reveal.in{opacity:1;transform:none}
   .reveal-l{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
@@ -266,6 +259,8 @@
   .reveal-group.in>*:nth-child(1){transition-delay:.00s}.reveal-group.in>*:nth-child(2){transition-delay:.05s}
   .reveal-group.in>*:nth-child(3){transition-delay:.10s}.reveal-group.in>*:nth-child(4){transition-delay:.15s}
   .reveal-group.in>*:nth-child(5){transition-delay:.20s}.reveal-group.in>*:nth-child(6){transition-delay:.25s}
+  .reveal-group.in>*:nth-child(7){transition-delay:.30s}.reveal-group.in>*:nth-child(8){transition-delay:.35s}
+  .reveal-group.in>*:nth-child(9){transition-delay:.40s}.reveal-group.in>*:nth-child(n+10){transition-delay:.45s}
   @media(prefers-reduced-motion:reduce){.reveal,.reveal-l,.reveal-r,.reveal-group>*{opacity:1 !important;transform:none !important;transition:none !important}}
 </style>
 </head>
@@ -412,7 +407,6 @@
   </div>
 </section>
 
-<!-- ===== PROJECT GALLERY (collapsible) ===== -->
 <section id="gallery">
   <div class="wrap">
     <span class="eyebrow reveal">On the Ground</span>
@@ -529,14 +523,19 @@
 <section id="recognition">
   <div class="wrap">
     <span class="eyebrow reveal">Awards &amp; Recognition</span>
-    <h2 class="section-title reveal">Recognised for safety, spirit &amp; care</h2>
-    <p class="section-sub">Synlait "Milk Token" recognition awards received across my first months with the business.</p>
+    <h2 class="section-title reveal">Recognised for spirit, safety &amp; delivery</h2>
+    <p class="section-sub">Synlait "Milk Token" awards received throughout 2026, plus a Tetra Pak Bravo Award.</p>
     <div class="rec-grid reveal-group">
-      <div class="rec"><div class="cat">Making it Synlait Safe</div><p>"Great leadership across the D3 Lactose hoist mods to make it safe — thanks for staying back and doing long hours to prepare the plant for success."</p><div class="by">— <b>David Wolfe</b> · Feb 2026</div></div>
-      <div class="rec"><div class="cat">Synlait Spirit</div><p>"You showed up every day, did the work right, and kept safety first. Consistent and reliable when it counts. No shortcuts. Just solid work."</p><div class="by">— <b>David Wolfe</b> · Jul 2026</div></div>
-      <div class="rec"><div class="cat">Synlait Spirit</div><p>"One of the best self-starters in Synlait — reached out, made connections, and made great progress in only your first week."</p><div class="by">— <b>David Wolfe</b> · Jan 2026</div></div>
-      <div class="rec"><div class="cat">Synlait Spirit</div><p>"Passed the PMI Project Management Professional (PMP) exam at 'above target' level — well done, alongside delivering your project portfolio."</p><div class="by">— <b>David Cody-Mandell</b> · Jun 2026</div></div>
-      <div class="rec"><div class="cat">Synlait Care</div><p>"Focused on finding solutions for urgent projects to address the D2&amp;3 thermophiles and D2 RV valves cost-of-quality issues for winter shut."</p><div class="by">— <b>David Cody-Mandell</b> · Apr 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"Thank you for a great first week — you've reached out, made connections and been one of the best self-starters in Synlait, making great progress in only your first week."</p><div class="by">— <b>David Wolfe</b> · Jan 2026</div></div>
+      <div class="rec"><div class="cat">Making it Synlait Safe</div><p>"Great leadership across the D3 Lactose hoist mods to make it safe — thanks for staying back and doing long hours to prepare the plant for success. This is appreciated."</p><div class="by">— <b>David Wolfe</b> · Feb 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"Since joining as a Project Engineer you've shown strong, consistent professional growth — building credible relationships with your team, customers and plant. Your personal brand keeps strengthening."</p><div class="by">— <b>David Wolfe</b> · Mar 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Care</div><p>"Focused on finding solutions for urgent projects to address the D2 &amp; 3 thermophiles and D2 RV valve cost-of-quality issues for winter shut."</p><div class="by">— <b>David Cody-Mandell</b> · Apr 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"Always impressed by how you run your project meetings — great attendance because you lead well and engage the group. Thanks a lot."</p><div class="by">— <b>David Wolfe</b> · Jun 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"You've led the comms and execution for your Winter Shutdown projects smoothly through startup — keeping stakeholders aligned and bringing everyone with you. It's been noticed and appreciated."</p><div class="by">— <b>David Wolfe</b> · Jun 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"Over Wintershut you kept the safety bar high and quality standards up — while getting the work across the line and keeping comms flowing. Both, without dropping either. That's leadership."</p><div class="by">— <b>David Wolfe</b> · Jul 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"You showed up every day, did the work right, and kept safety first. Consistent and reliable when it counts. No shortcuts. Just solid work — that matters more than you might think."</p><div class="by">— <b>David Wolfe</b> · Jul 2026</div></div>
+      <div class="rec"><div class="cat">Team Player — Move as One</div><p>"Instrumental in the successful delivery of the D3 projects this winter — extreme ownership of deliverables and extra hours, including weekends, to support outcomes and hold timelines."</p><div class="by">— <b>Hendrik Bakker</b> · Aug 2026</div></div>
+      <div class="rec"><div class="cat">Synlait Spirit</div><p>"Passed the PMI Project Management Professional (PMP) exam at 'above target' level — well done, alongside delivering your project portfolio."</p><div class="by">— <b>David Cody-Mandell</b> · 2026</div></div>
       <div class="rec"><div class="cat">Tetra Pak · Bravo Award</div><p>"For demonstrating Dynamic Leadership on Project Victoria — volunteered to cover powder handling over Christmas and added real value to the project."</p><div class="by">— <b>Wayne Oliver</b>, Tetra Pak</div></div>
     </div>
   </div>
@@ -654,25 +653,18 @@
 <div id="toast">✓ Email copied to clipboard</div>
 
 <script>
-  /* reveal */
   (function(){
     var els=document.querySelectorAll('.reveal,.reveal-l,.reveal-r,.reveal-group');
     if(!('IntersectionObserver' in window)){els.forEach(function(el){el.classList.add('in');});return;}
     var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:0.10,rootMargin:'0px 0px -6% 0px'});
     els.forEach(function(el){io.observe(el);});
   })();
-
-  /* progress bar + back to top */
   window.addEventListener('scroll',function(){
     var h=document.documentElement,st=h.scrollTop||document.body.scrollTop,sh=(h.scrollHeight-h.clientHeight);
     document.getElementById('progress').style.width=(sh>0?(st/sh*100):0)+'%';
     document.getElementById('toTop').classList.toggle('show',st>600);
   },{passive:true});
-
-  /* collapsible galleries (click toggles 'open'; hover works via CSS) */
   function toggleGal(el){ if(event&&event.target.closest('.gal-item'))return; el.classList.toggle('open'); }
-
-  /* lightbox */
   var GALLERIES={
     customfoods:[{src:"gallery/cf_tipping_room.jpg",cap:"Tipping Room"},{src:"gallery/cf_25kg_powder_bag_tip.jpg",cap:"25kg Powder Bag Tip"},{src:"gallery/cf_25kg_semiauto_bag_tip.jpg",cap:"25kg Semi-auto Bag Tip"},{src:"gallery/cf_powder_mixer.jpg",cap:"Powder Mixer"},{src:"gallery/cf_tipping_conveyor.jpg",cap:"Tipping Conveyor"}],
     fonterrasifters:[{src:"gallery/fs_sifter_overview.jpg",cap:"Sifter Overview"},{src:"gallery/fs_sifter_hatches.jpg",cap:"Sifter Hatches"},{src:"gallery/fs_sifter_platform.jpg",cap:"Sifter Platform"},{src:"gallery/fs_sifter_vibrators.jpg",cap:"Sifter Vibrators"},{src:"gallery/fs_fluidbed_tundish.jpg",cap:"Fluidbed Tundish"}],
@@ -686,7 +678,6 @@
   function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.body.style.overflow='';}
   function lbStep(d){var a=GALLERIES[lbKey];lbIdx=(lbIdx+d+a.length)%a.length;renderLb();}
   document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLightbox();else if(e.key==='ArrowLeft')lbStep(-1);else if(e.key==='ArrowRight')lbStep(1);});
-
   var MY_EMAIL="medchaar@gmail.com";
   function showToast(m){var t=document.getElementById('toast');t.textContent=m;t.classList.add('show');clearTimeout(window.__t);window.__t=setTimeout(function(){t.classList.remove('show');},2200);}
   function copyEmail(){if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(MY_EMAIL).then(function(){showToast('✓ '+MY_EMAIL+' copied');}).catch(fallbackCopy);}else{fallbackCopy();}}
